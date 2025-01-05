@@ -74,11 +74,11 @@ weighted avg       0.76      0.79      0.75        80
 
 第三版：
 数据：
-     1. 增加多个标的数据,AMP,AVAX,BNB,DOGE,ETH,FIL,KAS,PEPE,SHIB,SOL,SUI,XRP
-     2. 增加多个衍生特征：distance_to_bandlow,distance_to_bandup,price_range,band_width,price_trend,volume_trend
-     3. 对0样本进行过采样
-     4. 采样方法更改为平衡采样
-     5. 增加5折交叉验证
+1. 增加多个标的数据,AMP,AVAX,BNB,DOGE,ETH,FIL,KAS,PEPE,SHIB,SOL,SUI,XRP
+2. 增加多个衍生特征：distance_to_bandlow,distance_to_bandup,price_range,band_width,price_trend,volume_trend
+3. 对0样本进行过采样
+4. 采样方法更改为平衡采样
+5. 增加5折交叉验证
 ```
 平衡后数据集大小: (4938, 65)
 交叉验证准确率: [0.74493927 0.73076923 0.74898785 0.79635258 0.78926039]
@@ -97,8 +97,8 @@ weighted avg       0.90      0.89      0.89       725
 
 ```
 结论：
-     1. 模型的测试集准确率提高，且 F1-score 和精确度/召回率表现优秀。
-     2. 针对0样本数据的分类准确度有所提高。过采样和平衡采样处理样本不平衡，效果显著
+1. 模型的测试集准确率提高，且 F1-score 和精确度/召回率表现优秀。
+2. 针对0样本数据的分类准确度有所提高。过采样和平衡采样处理样本不平衡，效果显著
 
 
 
