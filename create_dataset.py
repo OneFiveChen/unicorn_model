@@ -94,12 +94,13 @@ def create_dataset(data_dir):
             ]
             normalized_features.extend(extend_features)
 
+        # 数据非NAN才有效，去除不完整数据
         if not np.isnan(normalized_features).any():
             profit = trade_row[['获利 USDT']].values
             profit_label = np.where(profit > 0, 1, 0)
             features.append(np.concatenate([normalized_features, profit_label]))
-        else:
-            features.append([np.nan] * (len(titles) * k_num + 1)) #如果缺少 K线数据，填充 NaN
+        # else:
+        #     features.append([np.nan] * (len(titles) * k_num + 1)) #如果缺少 K线数据，填充 NaN
 
     # 构建DataFrame
     cols = [f"feature_{i}" for i in range(len(features[0]) - 1)]
